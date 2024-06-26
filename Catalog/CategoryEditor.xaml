@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="Catalog.CategoryEditor"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Catalog"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="White">
+
+    <ScrollViewer>
+        <StackPanel Padding="15">
+            <TextBlock Foreground="Black" FontWeight="Bold" FontSize="24" Name="AddHeader">Добавление подписки</TextBlock>
+
+            <TextBlock Foreground="Black" Height="23" Margin="0 30 0 0">Название</TextBlock>
+            <TextBox Name="CatName" PlaceholderText="Название" Margin="0 0 0 16" Background="#FF2DCE94" Foreground="Black"></TextBox>
+
+            <TextBlock Foreground="Black">Цена</TextBlock>
+            <TextBox Name="ProductPrice" PlaceholderText="Цена" Margin="0 0 0 16" Background="#FF2DCE94" ></TextBox>
+
+            <TextBlock Foreground="Black">Подписка</TextBlock>
+            <ComboBox Foreground="Black" Name="Catalog" Margin="0 0 0 16" DisplayMemberPath="name" HorizontalAlignment="Stretch" Background="#FF2DCE94" FocusVisualPrimaryBrush="#FFF00A0A" BorderBrush="#66FFFFFF" FocusVisualSecondaryBrush="#99000000" ></ComboBox>
+            
+            <Grid>
+                <Button Foreground="White" Background="#7B948B" Click="Add" Name="AddButton">Добавить</Button>
+                <Button Foreground="White" Background="#7B948B" Click="Cancel" HorizontalAlignment="Right">Отменить</Button>
+            </Grid>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

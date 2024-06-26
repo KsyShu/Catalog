@@ -1,0 +1,48 @@
+﻿<Page
+    x:Class="Catalog.Menu"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Catalog"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="White">
+
+    <ScrollViewer>
+        <StackPanel Padding="16">
+            <TextBlock FontWeight="Bold" FontSize="24" Foreground="Black">Подписка</TextBlock>
+            <Button Click="Cancel" HorizontalAlignment="Right" Background="#54635D">Назад</Button>
+
+
+            <Grid Background="#D9D9D9" CornerRadius="25" Height="95" Margin="0 10 0 0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Click="DayButton_Click" Background="#54635D" Margin="12,0,0,0" CornerRadius="25" Height="45" Width="45" Content="ПН"/>
+                <Button Grid.Column="1" Click="DayButton_Click" Background="#54635D" Margin="9,0,0,0" CornerRadius="25" Height="45" Width="45" Content="ВТ"/>
+                <Button Grid.Column="2" Click="DayButton_Click" Background="#54635D" Margin="9,0,0,0" CornerRadius="25" Height="45" Width="45" Content="СР"/>
+                <Button Grid.Column="3" Click="DayButton_Click" Background="#54635D" Margin="9,0,0,0" CornerRadius="25" Height="45" Width="45" Content="ЧТ"/>
+                <Button Grid.Column="4" Click="DayButton_Click" Background="#54635D" Margin="9,0,0,0" CornerRadius="25" Height="45" Width="45" Content="ПТ"/>
+                <Button Grid.Column="5" Click="DayButton_Click" Background="#54635D" Margin="9,0,0,0" CornerRadius="25" Height="45" Width="45" Content="СБ"/>
+                <Button Grid.Column="6" Click="DayButton_Click" Background="#54635D" Margin="6,0,0,0" CornerRadius="25" Height="45" Width="45" Content="ВС"/>
+                </Grid>
+            
+            
+            <Grid Background="#D9D9D9" Padding="16" Margin="0,20,0,0" Height="550" CornerRadius="25" >
+                <Button Foreground="Black" Click="Update" Background="#7B948B" Margin="0,-6,16,0" VerticalAlignment="Top" HorizontalAlignment="Right" Height="52" Width="115">
+                    <TextBlock TextAlignment="Center" SelectionHighlightColor="White">Редактировать<LineBreak/>прием пищи</TextBlock>
+                </Button>
+                <!--<TextBlock Foreground="Black"></TextBlock>-->
+                <ListBox Name="MenuListBox" Margin="0,55,0,0" Background="#2DCE94" SelectionChanged="SelectedMenu" >
+                    <Image Name="ImageControl"></Image>
+                </ListBox>
+            </Grid>
+        </StackPanel>
+    </ScrollViewer>
+</Page>

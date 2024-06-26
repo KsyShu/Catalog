@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="Catalog.EmployeeEditor"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Catalog"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="White">
+
+    <ScrollViewer Background="White">
+        <StackPanel Padding="16">
+            <TextBlock Foreground="Black" FontWeight="Bold" FontSize="24" Name="AddHeader">Добавление сотрудника</TextBlock>
+            
+            <TextBlock Margin="0 30 0 0" Foreground="Black">ФИО</TextBlock>
+            <TextBox Background="#FF2DCE94" Name="Fullname" PlaceholderText="ФИО" Margin="0 0 0 16"></TextBox>
+            
+            <TextBlock Foreground="Black">Имя пользователя</TextBlock>
+            <TextBox Background="#FF2DCE94" Name="Username" PlaceholderText="Username" Margin="0 0 0 16"></TextBox>
+
+            <TextBlock Foreground="Black">Пароль</TextBlock>
+            <PasswordBox Background="#FF2DCE94" Name="Password" PlaceholderText="Пароль" Margin="0 0 0 16"></PasswordBox>
+
+            <Grid>
+                <Button Foreground="White" Background="#7B948B" Click="Add" Name="AddButton">Добавить</Button>
+                <Button Foreground="White" Background="#7B948B" Click="Cancel" HorizontalAlignment="Right">Отменить</Button>
+            </Grid>
+        </StackPanel>
+    </ScrollViewer>
+</Page>
